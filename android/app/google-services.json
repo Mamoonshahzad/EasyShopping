@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "900625754093",
+    "project_id": "easy-shopping-5452e",
+    "storage_bucket": "easy-shopping-5452e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900625754093:android:65f1659bc7ef937483e9e4",
+        "android_client_info": {
+          "package_name": "com.example.ecom_firebase_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjUjeV7EneDTeVJVE1Y1SsC_AbRnKN5Wg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
