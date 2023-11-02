@@ -25,7 +25,7 @@ class SignUpController extends GetxController {
       UserCredential userCredential =
           await _auth.createUserWithEmailAndPassword(
               email: userEmail, password: userPassword);
-
+      // send email verification
       await userCredential.user!.sendEmailVerification();
       UserModel userModel = UserModel(
           uId: userCredential.user!.uid,
@@ -41,11 +41,15 @@ class SignUpController extends GetxController {
           isActive: true,
           createdOn: DateTime.now(),
           city: userCity);
+
+      // add data into database
       _firestore
           .collection('user')
           .doc(userCredential.user!.uid)
           .set(userModel.toMap());
+
       EasyLoading.dismiss();
+      return userCredential;
     } on FirebaseAuthException catch (e) {
       EasyLoading.dismiss();
       Get.snackbar("Error", "$e,",
