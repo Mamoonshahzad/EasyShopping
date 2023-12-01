@@ -43,7 +43,7 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
+  static FirebaseOptions web = const FirebaseOptions(
     apiKey: 'AIzaSyCE5dfuF7-6NwzBBW4-eeX-HylaaGikurE',
     appId: '1:900625754093:web:191acc2c469836e783e9e4',
     messagingSenderId: '900625754093',
@@ -53,7 +53,7 @@ class DefaultFirebaseOptions {
     measurementId: 'G-HSKLGE006R',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
+  static FirebaseOptions android = const FirebaseOptions(
     apiKey: 'AIzaSyCjUjeV7EneDTeVJVE1Y1SsC_AbRnKN5Wg',
     appId: '1:900625754093:android:65f1659bc7ef937483e9e4',
     messagingSenderId: '900625754093',
@@ -61,21 +61,29 @@ class DefaultFirebaseOptions {
     storageBucket: 'easy-shopping-5452e.appspot.com',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
+  static FirebaseOptions ios = const FirebaseOptions(
     apiKey: 'AIzaSyD4ENUhQiuknLmJl8FpoKIgFFhPjZiz3GI',
     appId: '1:900625754093:ios:22455e073ee12c5983e9e4',
     messagingSenderId: '900625754093',
     projectId: 'easy-shopping-5452e',
     storageBucket: 'easy-shopping-5452e.appspot.com',
+    androidClientId:
+        '900625754093-t4ibikqo1k01mf3pf750elnfar2o6ia4.apps.googleusercontent.com',
+    iosClientId:
+        '900625754093-et0hm78up00c3fl1lui2lm7mpc83eljb.apps.googleusercontent.com',
     iosBundleId: 'com.example.ecomFirebaseApp',
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
+  static FirebaseOptions macos = const FirebaseOptions(
     apiKey: 'AIzaSyD4ENUhQiuknLmJl8FpoKIgFFhPjZiz3GI',
     appId: '1:900625754093:ios:103f56c0a3ae267d83e9e4',
     messagingSenderId: '900625754093',
     projectId: 'easy-shopping-5452e',
     storageBucket: 'easy-shopping-5452e.appspot.com',
+    androidClientId:
+        '900625754093-t4ibikqo1k01mf3pf750elnfar2o6ia4.apps.googleusercontent.com',
+    iosClientId:
+        '900625754093-kqc3ql7mt4dhvtssknv4is92bf16iijh.apps.googleusercontent.com',
     iosBundleId: 'com.example.ecomFirebaseApp.RunnerTests',
   );
 }

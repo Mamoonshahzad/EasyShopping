@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:ecom_firebase_app/controllers/get_device_token_controller.dart';
 import 'package:ecom_firebase_app/models/user_model.dart';
 import 'package:ecom_firebase_app/utils/app_constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 
@@ -20,6 +20,8 @@ class SignUpController extends GetxController {
     String userPassword,
     String userDeviceToken,
   ) async {
+    final GetDeviceTokenController getDeviceTokenController =
+        Get.put(GetDeviceTokenController());
     try {
       EasyLoading.show(status: "Please wait...");
       UserCredential userCredential =
@@ -33,7 +35,7 @@ class SignUpController extends GetxController {
           email: userEmail,
           phone: userPhone,
           userImg: '',
-          userDeviceToken: userDeviceToken,
+          userDeviceToken: getDeviceTokenController.deviceToken.toString(),
           country: '',
           userAddress: '',
           street: '',
@@ -57,5 +59,6 @@ class SignUpController extends GetxController {
           backgroundColor: AppConstant.appSecondaryColor,
           colorText: AppConstant.appTextColor);
     }
+    return null;
   }
 }

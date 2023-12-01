@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecom_firebase_app/controllers/signup_controller.dart';
 import 'package:ecom_firebase_app/pages/auth_ui/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
